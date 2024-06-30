@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Do you love me?</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+        color: #333;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .center-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        padding: 20px;
+      }
+      img {
+        max-width: 100%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .buttones {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .btn {
+        display: inline-block;
+        margin: 10px;
+        transition: transform 0.2s, background-color 0.2s;
+      }
+      .btn:hover {
+        transform: scale(1.1);
+      }
+      h1, h2, p {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.68);
+      }
+      h1 {
+        font-family: 'Pacifico', cursive;
+        font-weight: 800;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+        color: #6d2e5b; /* Darker pinkish color for header */
+      }
+      h2 {
+        font-size: 18px;
+        padding-top: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: #9c4f75; /* Medium pinkish color for subheadings */
+      }
+      .nooo {
+        color: #d81159; /* Brighter pinkish color for negative text */
+        font-weight: 700;
+        font-size: 25px;
+      }
+      #yesbut {
+        background: #4caf50; /* Green color for 'Yes' button */
+        color: white;
+      }
+      #nobut {
+        background: #f44336; /* Red color for 'No' button */
+        color: white;
+      }
+      .mainn a {
+        text-decoration: none;
+        position: absolute;
+        right: 2%;
+        color: #9c4f75; /* Medium pinkish color for link */
+        bottom: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="center-screen">
+      <h1>Ishita, read this and proceed to play a game of yes and no😚...</h1> 
+      <p>Ishhh, Hippo, MILF, Cold Heartless Bitch, Snorlax, My love</p> 
+      <p>Ik things have been tough, lot of misunderstandings (this is true 690%), lot of unecessary fights, lots of chutiyapa instead of true love..</p> 
+      <p>Truly and honestly we never fixed our things, we never sorted things out, be it mine or yours or related to both of us, we just let the things be as it is and hope that they workout themselves, we really never fixed things, talking abt it as a formality after a fight isn't fixing things, we need to sit down once and discuss about our insecurities, both yours and mine, talk about things and solve it together, doing something and getting both ourselves hurt and then discussing the issue isn't called fixing. It's been 1.5 years, taking our own time, letting time pass by and hoping that things will workout themselves won't work right, you always did that, it never worked out not for you, not for me, not for us right? Ik due to your past it's hard for you to sit down and talk like this, but sit down with me, Mai hoon na, I'll handle you and take care of you in this, Itna time hua to both of us, gone through different phases, I'm 690% sure I'll handle you through this and will be with you anytime you need, but if don't talk about things, if don't speak out clearly (both of us), how can we just expect that our partner to get everything and act accordingly.</p> 
+      <p>Ishhh, my love, I want to forget our bad past, sort it out, discuss things, improvise it and make it better not just for me or you but for both of us. I want both of us to love each other the way we want without hurting either of us. And this is possible, 690% possible if you just listen to me and once let the things done by my way, only to make it better for us because deep down Ik you love me more and than anything irrespective of however rude or harsh you'd act or blunt you'd go on me and same goes from my side, you know how much I actually love you and would do for you and am doing for you, that is the reason you come back even if uk dating is hard for you right? Just once please Ishita. For once lets get over our petty differences, lets sort out and actually fix things and build our relationship. Ik we will and we can do this. Let me be your magnet!?</p> 
+      <p>I hope you get it</p> 
+      <p>Also try clicking on the No button, you'll have fun fs until you're convinced to click the yes button (also click on Doodie)</p>
+      <h1>Will You Be My Love?</h1>
+      <img src="https://i.postimg.cc/DZkw7g5n/output-onlinegiftools.gif" alt="Valentine GIF" />
+      <button type="button" class="btn btn-danger" @click="changeText('noButton')" id="nooo">
+        <h2 class="nooo">{{ currentHeaderText }}</h2>
+      </button>
+      <div class="buttones">
+        <button
+          type="button"
+          class="btn btn-success"
+          :style="{ fontSize: yesButtonSize + 'rem' }"
+          :key="yesButtonSize"
+          @click="yesButton"
+          id="yesbut"
+        >
+          Yes
+        </button>
+        <button type="button" class="btn btn-danger" @click="changeText('noButton')" id="nobut">
+          No
+        </button>
+      </div>
+    </div>
+    <p class="mainn">
+      <a href="https://www.instagram.com/dushyant_9.58/?next=%2F">Made by Doodie (Your Kiddo)</a>
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          headerText: [
+            "",
+            "Hey Ishita, Are you sure about this?",
+            "Seriously Ishita? Don't make me beg!",
+            "Last chance, Ishita! My heart can't handle another rejection...",
+            "Surely not Ishita, you're just testing my patience!",
+            "You might regret this, Ishita. Or not. Roll the dice!",
+            "Give it another thought, Ishita. I promise I'm not that bad!",
+            "This could be a mistake, Ishita! But hey, mistakes can be fun!",
+            "Don't be so cold, Ishita. Say yes and let's heat things up!",
+            "Wouldn't you reconsider, Ishita? Think of the memes we'll make!",
+            "Is that your final answer, Ishita? No pressure, just a lot of hope!",
+            "You're breaking my heart :( Ishita, but a yes would fix it!",
+            "Ishita, let's make history! Or at least a cute love story.",
+            "Ishita, come on! Don't leave me hanging like my jokes...",
+            "Ishita, don't make me beg. (Okay, maybe just a little bit)",
+            "Ishita, let's do this. I've already planned our first pizza date!",
+            "Ishita, you're seriously considering saying no? Haha, nice try!",
+            "Ishita, saying yes is the right choice. Trust me, I've consulted the magic 8-ball.",
+            "Ishita, let's say yes and figure out the rest over ice cream.",
+            "Ishita, don't overthink it. Yes is the only answer that leads to pizza!",
+            "Ishita, saying no would be a crime against romance. Don't be a criminal!",
+            "Ishita, saying yes means unlimited hugs and bad puns. You know you want that.",
+            "Ishita, let's say yes and make everyone jealous. We'll be the talk of the town!",
+            "Ishita, saying yes is the easiest way to make me dance. I've got moves!",
+            "Ishita, saying yes is like finding free Wi-Fi. Essential for a happy life!", 
+            "Ishita, saying yes will unlock secret powers. (Not really, but let's pretend)",
+            "Ishita, saying yes means you get to meet my ridiculously cute pet. It's a win-win!",
+            "Ishita, saying yes means we can binge-watch cheesy rom-coms guilt-free. Isn't that the dream?",
+            "Ishita, saying yes will earn you a lifetime supply of my terrible cooking. You'll love it!",
+            "Ishita, saying yes means we can take the perfect couple selfies. #relationshipgoals",
+            
+          ],
+          confirmationMessages: [
+            "Are you sure?",
+            "Are you sure you don't like me?",
+            "Are you absolutely certain?",
+          ],
+          currentHeaderTextIndex: 0,
+          currentConfirmationIndex: 0,
+          yesButtonSize: 1,
+        },
+        methods: {
+          changeText(button) {
+            if (button === "noButton") {
+              this.currentHeaderTextIndex = (this.currentHeaderTextIndex + 1) % this.headerText.length;
+              this.currentConfirmationIndex = (this.currentConfirmationIndex + 1) % this.confirmationMessages.length;
+              this.yesButtonSize += 0.8; // Increased the increment rate
+            }
+          },
+          yesButton() {
+            window.location.href = "yes.html";
+          },
+        },
+        computed: {
+          currentHeaderText() {
+            return this.headerText[this.currentHeaderTextIndex];
+          },
+          currentConfirmationText() {
+            return this.confirmationMessages[this.currentConfirmationIndex];
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
